@@ -1,11 +1,13 @@
 import React from "react";
-import Todo from '../Datamodels/Todo'
+import Todo from '../Datamodels/Todo';
+import Todoitem from "./Todoitem";
+import classes from '../Components/Todos.module.css'
 
-const Todos: React.FC<{ items:Todo[] }> = (props) => {
+const Todos: React.FC<{ items:Todo[]; onDelete:(id:string)=> void}> = (props) => {
   return (
-    <ul>
+    <ul className={classes.list}>
     {props.items.map((item)=>{
-        return( <li key={item.id}>{item.text}</li>)
+        return( <Todoitem key ={item.id}text={item.text} onDelete={props.onDelete.bind(null,item.id)}/>)
        
     })}
     </ul>

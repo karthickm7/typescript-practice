@@ -19,9 +19,13 @@ const Todoform:React.FC <{onAddTodo: (text: string) => void }>= (props)=>{
   };
     return(
         <form onSubmit={handleSubmit} className={classes.form}>
+            <div className={classes.inputContainer}>
             <label htmlFor="text">Enter your ToDo</label>
             <input type='text' id='text' ref={todoInputRef}/>
-            <button>Add Todo</button>
+            </div>
+            <div className={classes.button}>
+            <button id="btn">Add Todo</button>
+            </div>
         </form>
 
     )

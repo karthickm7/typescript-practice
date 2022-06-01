@@ -35,12 +35,12 @@ people = [
 
 //Type inference
 
-let course = "this is typescript course";
+let course = "ghgj";
 course = "ghgj";
 
 //union types
 
-let coursetype: string | number;
+let coursetype: string | number | boolean ;
 coursetype = 334;
 
 
@@ -69,3 +69,18 @@ const result2 =log ('amir')
 const result =log(1234)
 
 export default log;
+
+
+let integers: number[];
+integers=[1,2,3,4,5,6]
+
+type name ={
+  fname:string,
+  roles:string[],
+  age:number
+}
+
+let employee : name[];
+employee=[
+  {fname:'jhhhk',roles:['fhhhhh'],age:8}
+]

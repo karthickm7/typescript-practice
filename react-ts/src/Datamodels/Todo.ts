@@ -1,5 +1,3 @@
-
-
 class Todo {
     id:string;
     text:string;
